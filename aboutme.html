@@ -1,0 +1,653 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  
+
+  <title>Contact/Avadesh Sharma- Web develpoer </title>
+
+    <link rel="canonical" href="https://codepen.io/MutantSpore/pen/EPYjyj">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  
+<style>
+body {
+  padding-top: 50px;
+  padding-bottom: 00px;
+  background-color: #f6f6f6;
+}
+
+.full {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgb(28, 28, 28);
+}
+
+.navbar {
+  z-index: 9999;
+  background-color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 0;
+  font-size: 24px;
+  line-height: 48px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-lnk {
+  position: absolute;
+  bottom: 15px;
+}
+
+.btn-lnk0 {
+  left: 30px;
+}
+
+.btn-lnk1 {
+  right: 30px;
+}
+
+
+#twoam {
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(28, 28, 28);
+  color: white;
+}
+
+/* Default background image for laptop and bigger screen */
+#twoam {
+  background-image: url("31138963458\ \(15\)-PhotoRoom\ \(2\)\ \(1\).png");
+  background-size: cover;
+}
+
+/* Mobile background image for mobile screen */
+@media only screen and (max-width: 768px) {
+  #twoam {
+    background-image: url("31138963458\ \(15\)-PhotoRoom\ \(2\)\ \(2\).png");
+    background-size: contain;
+  }
+}
+
+
+#nav-bar ul li:hover::after {
+  width: 100%;
+}
+
+#nav-bar ul li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  background: #607D8B;
+  width: 0;
+  transition: width 0.2s;
+}
+
+.max {
+  max-width: 1300px;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.7em;
+  letter-spacing: 0.03em;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#about {
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+#about .desc {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.icon-me {
+  text-align: center;
+  font-size: 5em;
+  color: rgba(200, 100, 100, 0.7);
+  padding-top: 20px;
+  padding-bottom: 25px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.30);
+}
+
+.icon-contact {
+  text-align: center;
+  font-size: 7.5em;
+  color: rgba(152, 110, 110, 0.4);
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+.icon-contact a {
+  color: rgba(152, 110, 110, 0.4) !important;
+}
+
+#portfolio {
+  background-color: #f6f6f6;
+  width: 100vw;
+  max-width: 1000px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+#portfolio .desc {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+.tagline1 {
+  font-family: 'lato', sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  font-style: italic;
+  color: #bbb;
+  text-align: left;
+  padding-top: 70px;
+  text-shadow: 1px 1px black;
+}
+
+.tagline2 {
+  font-family: 'lato', sans-serif;
+  font-size: 7em;
+  letter-spacing: 7px;
+  line-height: 0.95em;
+  font-weight: 100;
+  color: white;
+  text-align: left;
+  text-shadow: 1px 1px black;
+  padding-top: 10px;
+}
+
+.tagline3a, .tagline3b, .tagline3c {
+  font-family: 'courier', sans-serif;
+  font-size: 1.75em;
+  font-style: italic;
+  color: #666;
+  text-align: left;
+  line-height: 1em;
+  text-shadow: 1px 1px black;
+}
+
+.tagline3a {
+  padding-top: 50px;
+}
+
+.tagline3b {
+  padding-left: 30px;
+}
+
+.line {
+  height: 3px;
+  width: 100px;
+  position: relative;
+  top: -12px;
+  display: inline-block;
+  background-color: #999;
+}
+
+.line.about {
+  background-color: rgba(0, 0, 0, 0.54);
+}
+
+.line.portfolio {
+  background-color: rgba(0, 0, 0, 0.54);
+}
+
+.line.contact {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.section-title {
+  font-family: 'lato', sans-serif;
+  font-size: 3.5em;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  padding-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section-title.about {
+  color: rgba(0, 0, 0, 0.54);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.section-title.portfolio {
+  color: rgba(0, 0, 0, 0.54);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.section-title.contact {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.99);
+}
+
+.section-banner {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.project-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.75em;
+  font-weight: 500;
+  padding-top: 4px;
+  padding-bottom: 1px;
+  color: #666;
+  text-align: center;
+}
+
+.project-headings {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.project-body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 1px;
+  line-height: 1.5em;
+  letter-spacing: 0.03em;
+}
+
+.project {
+  border-width: thin;
+  border-color: #ccc;
+}
+
+.intro {
+  height: 100vh;
+  width: 100%;
+}
+
+.content {
+  vertical-align: middle;
+}
+
+/*section {
+  width: 100%;
+  margin: 0;
+  max-width: none;
+  background-color: #000;
+  height: 100vh;
+}*/
+
+#social-footer {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+#social-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#social-footer ul li {
+  display: inline;
+  padding: 0.4em;
+}
+
+#social-footer a {
+/*  color: #939393 !important; */
+  color: white !important;
+}
+
+.blacktext {
+  color: black;
+}
+
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1% 5%;
+  text-align: center;
+  background-color: #000;
+  opacity: 1;
+  z-index: 100;
+  a {
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+
+a.fa {
+  text-decoration: none
+}
+
+a:link {
+  text-decoration: none !important;
+  outline: 0;
+}
+
+.fa-stack {
+  margin: -2px;
+}
+
+.copyright {
+  padding-bottom: 0px;
+  padding-top: 5px;
+  color: #555;
+}
+
+#down {
+  position: absolute;
+  opacity: 0.20;
+  left: 50%;
+  bottom: 10%;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 365px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  perspective: 2000px;
+  cursor: pointer;
+}
+
+.card img {
+  width: calc(300px - 0px);
+  height: calc(365px - 45px);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.16);
+  border-bottom-width: 1px;
+}
+
+.card_front, .card_back {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: inherit;
+  height: inherit;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 6px;
+  border-color: #666;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.9s ease-in-out;
+  transition: transform 0.9s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+}
+
+
+.card_front:hover, .card_back:hover {
+  left: -4px;
+  top: -4px;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_front {
+  background-color: white;
+}
+
+.card_back {
+  background-color: #fafffc;
+  -webkit-transform: rotateY(179deg);
+  -ms-transform: rotateY(179deg);
+  transform: rotateY(179deg);
+}
+
+.card.effect_click.flipped .card_front {
+
+  -webkit-transform: rotateY(-179deg);
+  -ms-transform: rotateY(-179deg);
+  transform: rotateY(-179deg);
+}
+
+.card.effect_click.flipped .card_back {
+
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.highlight {
+  opacity: 0.6;
+}
+
+.highlight:hover {
+  opacity: 1;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  #contact {
+    background-attachment: scroll;
+  }
+
+  #twoam {
+    background-size: contain;
+  }
+
+
+  .tagline1 {
+    font-size: 1.2em;
+  }
+
+  .tagline2 {
+    font-size: 2.8em;
+  }
+
+  .tagline3a, .tagline3b, .tagline3c {
+    font-size: 1em;
+  }
+
+  .section-title {
+    font-size: 2.6em;
+  }
+
+  .line {
+    height: 2px;
+    width: 70px;
+    position: relative;
+    top: -10px;
+    display: inline-block;
+    background-color: #666;
+  }
+
+  .icon-me {
+    font-size: 7.5empx;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .icon-contact {
+    font-size: 4.5em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no" data-spy="scroll" data-target=".navbar" data-offset="50">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300italic,400,700,900" rel="stylesheet" type="text/css">
+
+ 
+
+
+  <title>Avadesh Sharma - Personal Portfolio</title>
+
+
+
+
+  <nav id="nav-bar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        <a class="navbar-brand animated flip" href="#twoam">Avadesh Sharma</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="navbar-collapse collapse" id="navbar-collapse-1" aria-expanded="false" style="height: 0.8px;">
+        <ul class="nav navbar-nav navbar-right">
+          <li class=""><a href="aboutme.html">About</a></li>
+          <li class=""><a href="index.html">Portfolio</a></li>
+          <li class=""><a href="conatct.html">Contact</a></li>
+        </ul>
+
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+
+  <header id="twoam">
+    <div class="container-fluid">
+      <div class="row me animated fadeIn">
+        <div class="col-xs-offset-5 col-sm-offset-6 col-xs-7 col-sm-6">
+          <div class="tagline1">The portfolio of</div>
+          <div class="tagline2 animated fadeIn">AVADESH</div>
+          <div class="tagline2 animated fadeIn">SHARMA</div>
+          <div class="animated fadeIn">
+            <div class="tagline3a">{</div>
+            <div class="tagline3b">designer :
+              <br> coder :
+              <br> gamer :
+              <br> reader :
+              <br>
+            </div>
+            <div class="tagline3c">}</div>
+          </div>
+        </div>
+      </div>
+      <div id="down" class="animated infinite slideInDown">
+        <i class="fa fa-chevron-circle-down fa-5x" aria-hidden="true"></i>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- about page -->
+  <section id="about" class="container-fluid">
+
+    <div class="row section-banner">
+      <div class="col-md-offset-3 col-md-6 text-center">
+        <div>
+          <span class="line about"></span>
+          <span class="section-title about">about</span>
+          <span class="line about"></span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row max">
+
+      <div class="col-sm-4 text-center">
+        <div class="desc">
+          <div class="icon-me"><i class="fa fa-user"></i></div>
+          <p>I am a passionate and dedicated web developer with experience in creating responsive and dynamic web applications. With a focus on user experience and clean code, I strive to deliver high-quality solutions that exceed expectations.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <div class="desc">
+          <div class="icon-me"><i class="fa fa-mortar-board"></i></div>
+          <p>I firmly believe in life long learning and I'm constantly exploring new ideas and technologies. MOOC's have enabled me to update my skills and keep abreast of the latest trends in design and coding.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <div class="desc">
+          <div class="icon-me"><i class="fa fa-rocket"></i></div>
+          <p>With a Bachelor's degree in Computer Science, I've embarked on a thrilling adventure in the tech landscape. My passion for coding, algorithms, and all things digital has driven me to explore the endless possibilities that this dynamic field has to offer.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <script>
+    // Smooth scroll to the specified element
+    function scrollToElement(element) {
+      document.querySelector(element).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  
+    // Event listener for the down arrow click
+    document.getElementById('down').addEventListener('click', function() {
+      scrollToElement('#about');
+    });
+  </script>
+  
+  <script src="https://codepen.io/MutantSpore/pen/WMQWVB.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+
+
+
+
+</body>
+
+</html>
