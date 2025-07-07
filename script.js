@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             particlesContainer.appendChild(particle);
         }
     }
+    
     // Mobile menu toggle
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
