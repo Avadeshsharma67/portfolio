@@ -1,6 +1,13 @@
-@@ .. @@
-   "scripts": {
--    "test": "echo \"Error: no test specified\" && exit 1"
-+    "test": "echo \"Error: no test specified\" && exit 1",
-+    "dev": "http-server . -p 3000 -o"
-   },
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server . -p 3000 -o"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
