@@ -236,19 +236,6 @@ document.addEventListener('DOMContentLoaded', function() {
         skillObserver.observe(bar);
     });
 
-    // Enhanced hover effects for interactive elements
-    const interactiveElements = document.querySelectorAll('.btn, .project-card, .skill-category, .timeline-content, .contact-item, .stat');
-    interactiveElements.forEach(el => {
-        el.classList.add('enhanced-hover');
-        
-        el.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
-        });
-        
-        el.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
     // Form submission handling
     const contactForm = document.querySelector('.contact-form form');
     if (contactForm) {
@@ -286,6 +273,20 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Enhanced hover effects for interactive elements
+    const interactiveElements = document.querySelectorAll('.btn, .project-card, .skill-category, .timeline-content, .contact-item, .stat');
+    interactiveElements.forEach(el => {
+        el.classList.add('enhanced-hover');
+        
+        el.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        
+        el.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
 
     // Add loading animation to external links
     document.querySelectorAll('a[target="_blank"]').forEach(link => {
