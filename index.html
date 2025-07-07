@@ -1,86 +1,571 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="index.css">
-    <title>Avadesh Sharma Web Developer & UI/UX Designer</title>
+    <title>Avadesh Sharma - Educator, Entrepreneur & Tech Innovator</title>
+    <meta name="description" content="Passionate educator, entrepreneur, and tech innovator. Founder of EdVix and Sesh Academy, specializing in education technology and digital innovation.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <div class="custom-cursor">
-    <section>
-        <header class="container">
-            <div class="page-header">
-                <div class="logo">
-                    <a href="">Avadesh Sharma</a>
-                </div>
-                <input type="checkbox" id="click">
-    
-                <label for="click" class="mainicon">
-                    <div class="menu">
-                        <i class='bx bx-menu'></i>
-                    </div>
-                </label>
-                <ul>
-                    <li><a href="index.html"  class="active" style="--navAni:1">Home</a></li>
-                    <li><a href="aboutme.html" style="--navAni:2">About</a></li>
-                    <li><a href="https://edvix.netlify.app/" style="--navAni:3">Projects</a></li>
-                    <li><a href="conatct.html" style="--navAni:5">Contact</a></li>
-                </ul>
-                <label class="mode">
-                    <input type="checkbox" id="darkModeToggle">
-                    <i class='bx bxs-moon'></i>
-                </label>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Avadesh Sharma</a>
             </div>
-        </header>
-    
-        <div class="container">
-            <div class="main">
-                <div class="detail">
-                    <h3>Hi, I'm</h3>
-                    <h1><span style="color:#52489C;">Avadesh</span> Sharma</h1> 
-                    <p>Passionate educator and technology enthusiast dedicated to making 
-                        quality education accessible to everyone around the globe.
-                    </p>  
-                    <div class="social">
-                        <a href="https://www.linkedin.com/in/avadesh-tech/" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
-                        <a href="https://www.instagram.com/avdesh._.here/" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
-                        <a href="https://github.com/Avadeshsharma67" style="--socialAni:3"><i class='bx bxl-github'></i></a>
-                        <a href="https://twitter.com/Avadesh_here" style="--socialAni:3"><i class='bx bxl-twitter'></i></a>
-                        <a href="Wa.me/+916367987334" style="--socialAni:4"><i class='bx bxl-whatsapp'></i></a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span>🚀 Building the Future of Education</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Avadesh Sharma</span>
+                    </h1>
+                    <p class="hero-subtitle">Educator • Entrepreneur • Tech Innovator</p>
+                    <p class="hero-description">
+                        Passionate about building smarter, accessible, and impactful digital experiences 
+                        in education and technology. Founder of EdVix and Sesh Academy, currently 
+                        contributing to high-impact digital initiatives at NIORC.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-rocket"></i>
+                            View Projects
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/avadesh-tech/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Avadeshsharma67" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/Avadesh_here" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@AcademySesh" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="images">
-                    <img src="1739609793156-Photoroom.png" alt="" class="img-w">
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="1739609793156-Photoroom.png" alt="Avadesh Sharma" class="profile-image">
+                        <div class="image-bg"></div>
+                        <div class="floating-elements">
+                            <div class="floating-icon" style="--delay: 0s">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 1s">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 2s">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-</div>
-    <script>
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-        if (isDarkMode) {
-            body.classList.add('dark-mode');
-            darkModeToggle.checked = true;
-        }
-        darkModeToggle.addEventListener('change', () => {
-            if (darkModeToggle.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        });
-    </script>
-</body>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Bridging education, entrepreneurship, and technology</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <h3>🎓 Who I Am</h3>
+                        <p>
+                            With a strong academic foundation in Mathematics, Science, and Computer Science, 
+                            I bridge the gap between teaching, entrepreneurship, and digital product development. 
+                            I empower students across school and college levels with clarity, confidence, and concept-first learning.
+                        </p>
+                    </div>
+                    <div class="about-mission">
+                        <h3>🎯 My Mission</h3>
+                        <p>
+                            To build the future of education, automation, and opportunity—by merging deep teaching 
+                            expertise with modern technology. I believe in creating solutions that are innovative, 
+                            inclusive, and learner-centered.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Companies Founded</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Students Taught</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Education Technology">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Ventures</h2>
+                <p class="section-subtitle">My journey in education, entrepreneurship, and technology</p>
+            </div>
+            <div class="experience-content">
+                <div class="experience-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="leadership">Leadership</button>
+                    <button class="category-btn" data-category="education">Education</button>
+                    <button class="category-btn" data-category="technology">Technology</button>
+                </div>
+                <div class="experience-timeline">
+                    <div class="timeline-item" data-category="leadership technology">
+                        <div class="timeline-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>NIORC</h3>
+                                <span class="timeline-date">Present</span>
+                            </div>
+                            <h4>Digital Training & Project Execution</h4>
+                            <p>Contributing to high-impact digital initiatives, training, and tech-driven innovation. Working across tools, teams, and technologies to build effective learning solutions.</p>
+                            <div class="timeline-skills">
+                                <span>Digital Training</span>
+                                <span>Project Management</span>
+                                <span>EdTech Consultation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-category="leadership education">
+                        <div class="timeline-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>EdVix</h3>
+                                <span class="timeline-date">2023 - Present</span>
+                            </div>
+                            <h4>Founder & CEO</h4>
+                            <p>A forward-thinking EdTech platform supporting learning and reselling of premium courses through the innovative Revamped Courses model.</p>
+                            <div class="timeline-skills">
+                                <span>EdTech</span>
+                                <span>Business Strategy</span>
+                                <span>Product Development</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-category="education leadership">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Sesh Academy</h3>
+                                <span class="timeline-date">2022 - Present</span>
+                            </div>
+                            <h4>Founder & Educator</h4>
+                            <p>A micro-EdTech brand focused on conceptual clarity through live classes and video content. Creating high-quality educational videos in Math, Science, and Computer Science.</p>
+                            <div class="timeline-skills">
+                                <span>Content Creation</span>
+                                <span>YouTube</span>
+                                <span>Live Teaching</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-category="education">
+                        <div class="timeline-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Independent Educator</h3>
+                                <span class="timeline-date">2020 - Present</span>
+                            </div>
+                            <h4>Mathematics & Computer Science Teacher</h4>
+                            <p>Teaching Mathematics (School to Undergraduate), Science (CBSE 9-10), and Computer Science including C++, React.js, .NET, and Networking.</p>
+                            <div class="timeline-skills">
+                                <span>Mathematics</span>
+                                <span>Computer Science</span>
+                                <span>Mentoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Innovative solutions in education and technology</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg" alt="EdVix Platform">
+                        <div class="project-overlay">
+                            <a href="https://edvix.netlify.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-badge">Featured</div>
+                        <h3>EdVix Platform</h3>
+                        <p>Revolutionary EdTech platform with Revamped Courses model allowing students to resell completed courses, making quality education more accessible and affordable.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" alt="Sesh Academy">
+                        <div class="project-overlay">
+                            <a href="https://www.youtube.com/@AcademySesh" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sesh Academy YouTube Channel</h3>
+                        <p>High-quality educational videos providing in-depth, concept-wise explanations in Mathematics, Science, and Computer Science.</p>
+                        <div class="project-tech">
+                            <span>Content Creation</span>
+                            <span>Video Editing</span>
+                            <span>Educational Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="AI Assistant">
+                        <div class="project-overlay">
+                            <div class="project-link">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Desktop AI Assistant</h3>
+                        <p>Custom-designed AI assistant for daily productivity and conversations, featuring desktop automation and intelligent task management.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>AI/ML</span>
+                            <span>Desktop Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg" alt="GoldPro Tokens">
+                        <div class="project-overlay">
+                            <div class="project-link">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>GoldPro Tokens & GEM NFTs</h3>
+                        <p>Blockchain utility project enabling staking and gold conversion, bridging traditional assets with modern cryptocurrency technology.</p>
+                        <div class="project-tech">
+                            <span>Blockchain</span>
+                            <span>Smart Contracts</span>
+                            <span>NFTs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">C++</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">C#</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>Frameworks & Libraries</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">React.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">ASP.NET</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">TailwindCSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Bootstrap</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Teaching & Education</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Mathematics</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Computer Science</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Content Creation</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Curriculum Design</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="tool-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-code"></i>
+                                <span>VS Code</span>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fab fa-shopify"></i>
+                                <span>Shopify</span>
+                            </div>
+                            <div class="tool-item">
+                                <i class="fas fa-video"></i>
+                                <span>OBS Studio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready to collaborate or discuss opportunities?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:sharmaavadesh67@gmail.com">sharmaavadesh67@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Portfolio</h3>
+                            <a href="https://avadesh.vercel.app" target="_blank">avadesh.vercel.app</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/avadesh-tech" target="_blank">linkedin.com/in/avadesh-tech</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>YouTube</h3>
+                            <a href="https://youtube.com/@AcademySesh" target="_blank">youtube.com/@AcademySesh</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xnqkeblo" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Avadesh Sharma. All rights reserved.</p>
+                    <p>Building the future of education and technology.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/avadesh-tech/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Avadeshsharma67" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/Avadesh_here" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@AcademySesh" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
