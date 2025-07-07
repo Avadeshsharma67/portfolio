@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Avadesh Sharma - Educator, Entrepreneur & Tech Innovator</title>
     <meta name="description" content="Passionate educator, entrepreneur, and tech innovator. Founder of EdVix and Sesh Academy, specializing in education technology and digital innovation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body role="main">
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#home">Avadesh Sharma</a>
             </div>
-            <div class="nav-menu" id="nav-menu">
+            <div class="nav-menu" id="nav-menu" role="menubar">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#experience" class="nav-link">Experience</a>
@@ -24,23 +30,24 @@
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <div class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-label="Hero section">
+        <div class="parallax-bg"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="hero-badge">
                         <span>🚀 Building the Future of Education</span>
                     </div>
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" role="heading" aria-level="1">
                         Hi, I'm <span class="highlight">Avadesh Sharma</span>
                     </h1>
                     <p class="hero-subtitle">Educator • Entrepreneur • Tech Innovator</p>
@@ -50,16 +57,16 @@
                         contributing to high-impact digital initiatives at NIORC.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">
+                        <a href="#contact" class="btn btn-primary" role="button" aria-label="Get in touch">
                             <i class="fas fa-envelope"></i>
                             Get In Touch
                         </a>
-                        <a href="#projects" class="btn btn-secondary">
+                        <a href="#projects" class="btn btn-secondary" role="button" aria-label="View projects">
                             <i class="fas fa-rocket"></i>
                             View Projects
                         </a>
                     </div>
-                    <div class="hero-social">
+                    <div class="hero-social" role="list" aria-label="Social media links">
                         <a href="https://www.linkedin.com/in/avadesh-tech/" target="_blank" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
@@ -76,16 +83,16 @@
                 </div>
                 <div class="hero-image">
                     <div class="image-container">
-                        <img src="1739609793156-Photoroom.png" alt="Avadesh Sharma" class="profile-image">
+                        <img src="1739609793156-Photoroom.png" alt="Avadesh Sharma - Professional headshot" class="profile-image" loading="eager">
                         <div class="image-bg"></div>
                         <div class="floating-elements">
-                            <div class="floating-icon" style="--delay: 0s">
+                            <div class="floating-icon" style="--delay: 0s" aria-label="Education icon">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <div class="floating-icon" style="--delay: 1s">
+                            <div class="floating-icon" style="--delay: 1s" aria-label="Code icon">
                                 <i class="fas fa-code"></i>
                             </div>
-                            <div class="floating-icon" style="--delay: 2s">
+                            <div class="floating-icon" style="--delay: 2s" aria-label="Innovation icon">
                                 <i class="fas fa-lightbulb"></i>
                             </div>
                         </div>
@@ -96,12 +103,12 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" aria-label="About section">
         <div class="container">
-            <div class="section-header">
+            <header class="section-header">
                 <h2 class="section-title">About Me</h2>
                 <p class="section-subtitle">Bridging education, entrepreneurship, and technology</p>
-            </div>
+            </header>
             <div class="about-content">
                 <div class="about-text">
                     <div class="about-intro">
@@ -120,7 +127,7 @@
                             inclusive, and learner-centered.
                         </p>
                     </div>
-                    <div class="about-stats">
+                    <div class="about-stats" role="list" aria-label="Achievement statistics">
                         <div class="stat">
                             <div class="stat-number">2+</div>
                             <div class="stat-label">Companies Founded</div>
@@ -140,27 +147,27 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Education Technology">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Education technology workspace" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <section id="experience" class="experience" aria-label="Experience section">
         <div class="container">
-            <div class="section-header">
+            <header class="section-header">
                 <h2 class="section-title">Experience & Ventures</h2>
                 <p class="section-subtitle">My journey in education, entrepreneurship, and technology</p>
-            </div>
+            </header>
             <div class="experience-content">
-                <div class="experience-categories">
-                    <button class="category-btn active" data-category="all">All</button>
-                    <button class="category-btn" data-category="leadership">Leadership</button>
-                    <button class="category-btn" data-category="education">Education</button>
-                    <button class="category-btn" data-category="technology">Technology</button>
+                <div class="experience-categories" role="tablist" aria-label="Experience categories">
+                    <button class="category-btn active" data-category="all" role="tab" aria-selected="true">All</button>
+                    <button class="category-btn" data-category="leadership" role="tab" aria-selected="false">Leadership</button>
+                    <button class="category-btn" data-category="education" role="tab" aria-selected="false">Education</button>
+                    <button class="category-btn" data-category="technology" role="tab" aria-selected="false">Technology</button>
                 </div>
-                <div class="experience-timeline">
+                <div class="experience-timeline" role="tabpanel" aria-label="Experience timeline">
                     <div class="timeline-item" data-category="leadership technology">
                         <div class="timeline-icon">
                             <i class="fas fa-briefcase"></i>
@@ -239,16 +246,16 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" aria-label="Projects section">
         <div class="container">
-            <div class="section-header">
+            <header class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">Innovative solutions in education and technology</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card featured">
+            </header>
+            <div class="projects-grid" role="list" aria-label="Project portfolio">
+                <article class="project-card featured" role="listitem">
                     <div class="project-image">
-                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg" alt="EdVix Platform">
+                        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg" alt="EdVix Platform interface" loading="lazy">
                         <div class="project-overlay">
                             <a href="https://edvix.netlify.app/" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
@@ -266,10 +273,10 @@
                             <span>Stripe</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card" role="listitem">
                     <div class="project-image">
-                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" alt="Sesh Academy">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" alt="Sesh Academy educational content" loading="lazy">
                         <div class="project-overlay">
                             <a href="https://www.youtube.com/@AcademySesh" target="_blank" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
@@ -285,10 +292,10 @@
                             <span>Educational Design</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card" role="listitem">
                     <div class="project-image">
-                        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="AI Assistant">
+                        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="AI Assistant interface" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-link">
                                 <i class="fas fa-lock"></i>
@@ -304,10 +311,10 @@
                             <span>Desktop Automation</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card" role="listitem">
                     <div class="project-image">
-                        <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg" alt="GoldPro Tokens">
+                        <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg" alt="GoldPro Tokens blockchain interface" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-link">
                                 <i class="fas fa-coins"></i>
@@ -323,18 +330,18 @@
                             <span>NFTs</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" aria-label="Skills section">
         <div class="container">
-            <div class="section-header">
+            <header class="section-header">
                 <h2 class="section-title">Skills & Expertise</h2>
                 <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
+            </header>
             <div class="skills-content">
                 <div class="skills-categories">
                     <div class="skill-category">
@@ -346,25 +353,25 @@
                             <div class="skill-item">
                                 <span class="skill-name">JavaScript</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <div class="skill-progress" style="width: 90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript skill level"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Python</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <div class="skill-progress" style="width: 85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Python skill level"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">C++</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 80%"></div>
+                                    <div class="skill-progress" style="width: 80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="C++ skill level"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">C#</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 75%"></div>
+                                    <div class="skill-progress" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="C# skill level"></div>
                                 </div>
                             </div>
                         </div>
@@ -378,25 +385,25 @@
                             <div class="skill-item">
                                 <span class="skill-name">React.js</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <div class="skill-progress" style="width: 90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="React.js skill level"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">ASP.NET</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 80%"></div>
+                                    <div class="skill-progress" style="width: 80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="ASP.NET skill level"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">TailwindCSS</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <div class="skill-progress" style="width: 85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="TailwindCSS skill level"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Bootstrap</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <div class="skill-progress" style="width: 85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Bootstrap skill level"></div>
                                 </div>
                             </div>
                         </div>
@@ -410,25 +417,25 @@
                             <div class="skill-item">
                                 <span class="skill-name">Mathematics</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%"></div>
+                                    <div class="skill-progress" style="width: 95%" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Mathematics skill level"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Computer Science</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <div class="skill-progress" style="width: 90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Computer Science skill level"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Content Creation</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <div class="skill-progress" style="width: 85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Content Creation skill level"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <span class="skill-name">Curriculum Design</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 80%"></div>
+                                    <div class="skill-progress" style="width: 80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Curriculum Design skill level"></div>
                                 </div>
                             </div>
                         </div>
@@ -471,12 +478,12 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" aria-label="Contact section">
         <div class="container">
-            <div class="section-header">
+            <header class="section-header">
                 <h2 class="section-title">Let's Connect</h2>
                 <p class="section-subtitle">Ready to collaborate or discuss opportunities?</p>
-            </div>
+            </header>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -517,18 +524,18 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/xnqkeblo" method="POST">
+                    <form action="https://formspree.io/f/xnqkeblo" method="POST" aria-label="Contact form">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required aria-label="Your email">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required aria-label="Subject">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="5" required aria-label="Your message"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i>
@@ -541,14 +548,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
                     <p>&copy; 2024 Avadesh Sharma. All rights reserved.</p>
                     <p>Building the future of education and technology.</p>
                 </div>
-                <div class="footer-social">
+                <div class="footer-social" role="list" aria-label="Footer social media links">
                     <a href="https://www.linkedin.com/in/avadesh-tech/" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
