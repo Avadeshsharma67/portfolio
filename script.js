@@ -511,4 +511,3 @@ accessibilityStyle.textContent = `
     }
 `;
 document.head.appendChild(accessibilityStyle);
-}
