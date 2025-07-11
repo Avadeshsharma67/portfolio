@@ -1202,9 +1202,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer {
-    background: #333;
-    color: white;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
     padding: clamp(2rem, 4.5vw, 2.5rem) 0;
+    border-top: 1px solid rgba(102, 126, 234, 0.1);
 }
 
 .footer-content {
@@ -1247,11 +1248,13 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .footer-social a:hover {
     transform: translateY(-3px);
     background: #764ba2;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 /* Animations */
@@ -1434,7 +1437,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1452,8 +1455,8 @@ h1, h2, h3, h4, h5, h6 {
 .loading-spinner {
     width: clamp(50px, 10vw, 70px);
     height: clamp(50px, 10vw, 70px);
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid white;
+    border: 4px solid rgba(102, 126, 234, 0.3);
+    border-top: 4px solid #667eea;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
