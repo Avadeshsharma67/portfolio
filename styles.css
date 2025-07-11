@@ -1551,39 +1551,3 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1;
     }
 }
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
-    }
-    
-    .navbar {
-        background: rgba(26, 26, 26, 0.95);
-    }
-    
-    .nav-link {
-        color: #e0e0e0;
-    }
-    
-    .timeline-content,
-    .project-card,
-    .skill-category,
-    .contact-form {
-        background: #2a2a2a;
-        color: #e0e0e0;
-    }
-    
-    .about {
-        background: #1a1a1a;
-    }
-    
-    .contact {
-        background: #1a1a1a;
-    }
-    
-    .projects {
-        background: #1a1a1a;
-    }
-}
