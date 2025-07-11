@@ -42,18 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Create cursor trail effect (desktop only)
-    if (window.innerWidth > 768) {
-        const cursorTrail = document.createElement('div');
-        cursorTrail.className = 'cursor-trail';
-        document.body.appendChild(cursorTrail);
-
-        document.addEventListener('mousemove', function(e) {
-            cursorTrail.style.left = e.clientX + 'px';
-            cursorTrail.style.top = e.clientY + 'px';
-        });
-    }
-
     // Create particles for hero section
     const heroSection = document.querySelector('.hero');
     if (heroSection) {
@@ -62,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         heroSection.appendChild(particlesContainer);
 
         // Create particles
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 15; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
             particle.style.left = Math.random() * 100 + '%';
@@ -73,21 +61,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Mobile menu toggle
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
-        
-        // Add haptic feedback on mobile
-        if (navigator.vibrate) {
-            navigator.vibrate(50);
-        }
-    });
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            
+            // Add haptic feedback on mobile
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+        });
+    }
 
     // Close mobile menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('active');
+            if (navToggle) navToggle.classList.remove('active');
         });
     });
 
@@ -115,18 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
-        }
-        
-        // Parallax effect for hero background
-        const heroImage = document.querySelector('.hero-image');
-        if (heroImage && scrollTop < window.innerHeight) {
-            heroImage.style.transform = `translateY(${scrollTop * 0.1}px)`;
-        }
-        
-        // Parallax effect for background elements
-        const parallaxBg = document.querySelector('.parallax-bg');
-        if (parallaxBg && scrollTop < window.innerHeight) {
-            parallaxBg.style.transform = `translateY(${scrollTop * 0.05}px)`;
         }
     });
 
@@ -187,7 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                // Add smooth scroll with offset for fixed navbar
                 const offsetTop = target.offsetTop - 80;
                 window.scrollTo({
                     top: offsetTop,
@@ -200,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver(function(entries) {
@@ -258,8 +235,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.style.background = '';
                 }, 2000);
             }, 1000);
-            
-            // Reset button after 3 seconds (form will redirect via Formspree)
         });
         
         // Form field animations
@@ -278,8 +253,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Enhanced hover effects for interactive elements
     const interactiveElements = document.querySelectorAll('.btn, .project-card, .skill-category, .timeline-content, .contact-item, .stat');
     interactiveElements.forEach(el => {
-        el.classList.add('enhanced-hover');
-        
         el.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px)';
         });
@@ -289,39 +262,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add loading animation to external links
-    document.querySelectorAll('a[target="_blank"]').forEach(link => {
-        link.addEventListener('click', function() {
-            this.style.opacity = '0.7';
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.opacity = '1';
-                this.style.transform = 'scale(1)';
-            }, 200);
-        });
-    });
-
-
-    // Dynamic typing effect for hero subtitle (optional enhancement)
-    const heroSubtitle = document.querySelector('.hero-subtitle');
-    if (heroSubtitle) {
-        const roles = ['Educator', 'Entrepreneur', 'Tech Innovator', 'Content Creator'];
-        let currentRole = 0;
-        
-        function typeRole() {
-            heroSubtitle.style.opacity = '0';
-            setTimeout(() => {
-                const role = roles[currentRole];
-                heroSubtitle.textContent = role + ' • ' + roles[(currentRole + 1) % roles.length] + ' • ' + roles[(currentRole + 2) % roles.length];
-                heroSubtitle.style.opacity = '1';
-            }, 300);
-            currentRole = (currentRole + 1) % roles.length;
-        }
-        
-        // Update every 3 seconds
-        setInterval(typeRole, 3000);
-    }
-    
     // Add click ripple effect
     function createRipple(event) {
         const button = event.currentTarget;
@@ -350,36 +290,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Keyboard navigation support
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('active');
+            if (navToggle) navToggle.classList.remove('active');
         }
     });
-    
-    // Touch gestures for mobile
-    let touchStartY = 0;
-    let touchEndY = 0;
-    
-    document.addEventListener('touchstart', function(e) {
-        touchStartY = e.changedTouches[0].screenY;
-    });
-    
-    document.addEventListener('touchend', function(e) {
-        touchEndY = e.changedTouches[0].screenY;
-        handleSwipe();
-    });
-    
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = touchStartY - touchEndY;
-        
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                // Swipe up - hide mobile menu if open
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            }
-        }
-    }
     
     // Performance optimization: Throttle scroll events
     let ticking = false;
@@ -422,38 +336,6 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 });
-
-
-// Performance optimization: Lazy loading for images
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-    });
-}
-
-// Service Worker for offline functionality (optional)
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-                console.log('ServiceWorker registration successful');
-            })
-            .catch(function(err) {
-                console.log('ServiceWorker registration failed');
-            });
-    });
-}
 
 // Add viewport height fix for mobile browsers
 function setViewportHeight() {
